@@ -11,12 +11,13 @@ alphanum=letter_list+letter_cap_list+nums_list
 
 t=int(input("enter how long you need your alphanumeric password to be: "))
 password="".join((random.choice(alphanum) for i in range(t)))
-
 print(password)
 
-with open('pass.txt',"a") as f:
-    print("selected length of the code is: ",t,file=f)
-    print("your alphanumeric password is: ",password,file=f)
+def pass_file(x):
+    with open('../python scripting/pass.txt', "a") as f:
+        print("selected length of the code is: ",t,file=f)
+        print("your alphanumeric password is: ",password,file=f)
+        print("the encrypted password is: ",x,file=f)
 
 
 
